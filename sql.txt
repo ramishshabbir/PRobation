@@ -1,0 +1,17 @@
+exec dbo.MIPSQualityReport
+@fromjob=1, @iYear = 2022
+
+select * from QRDA_Lookup_Measures
+
+EXEC stp_qrda_gettestdata 
+@iPracid = 1,
+@iuserid=2232,
+@startdate='01/01/2022',
+@enddate='12/01/2022'
+
+select * from PMPRXFT
+
+select * from CMUSXHD where VUNAME = 'farwa'
+
+
+https://mdinteractive.com/2023-mips-quality-measures
